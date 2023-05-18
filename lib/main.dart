@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'views/main_menu.dart';
 
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Veterinaria Friendly Pets',
       theme: ThemeData(
       ),
-      home: const MyApp(),
+      home: const mainMenu(),
     );
   }
 }
