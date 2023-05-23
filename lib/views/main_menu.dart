@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:proyecto_veterinaria/views/crear_cuenta.dart';
+import 'package:proyecto_veterinaria/views/login.dart';
 
 class mainMenu extends StatelessWidget {
   const mainMenu({super.key});
@@ -105,9 +107,13 @@ class mainMenu extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                            const SizedBox(
+                              height: 40,
+                            ),
                            const Expanded(
                              child: Text(
                               "Bienvenido a la veterinaria Friendly Pets",
+                              textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontFamily: 'GrenzeBold',
                                 fontSize: 35,
@@ -116,12 +122,12 @@ class mainMenu extends StatelessWidget {
                                                      ),
                            ),
                           const SizedBox(
-                            height: 100,
+                            height: 10,
                           ),
                           const Expanded(
                             child: Text(
-                              "Este es un espacio seguro y de confianza para sus\n" + 
-                              "mascotas,  ofrecemos variados servicios y contamos\n" +
+                              "Este es un espacio seguro y de confianza para sus " + 
+                              "mascotas,  ofrecemos variados servicios y contamos " +
                               "con excelentes profesionales especializados",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -132,9 +138,11 @@ class mainMenu extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 100,
+                            height: 50,
                           ),
-                          ElevatedButton(onPressed: () {}, 
+                          ElevatedButton(onPressed: () {Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=> const crear_cuenta())
+                          );}, 
                           /*Si está logueado debe redirigir a la pantalla de
                           reserver, si no, debe redirigir a login
                           */
@@ -146,7 +154,10 @@ class mainMenu extends StatelessWidget {
                                 color: Colors.white,
                               ),
                             ),
-                          ),  
+                          ), 
+                          const SizedBox(
+                            height: 40,
+                          ), 
                         ],
                       ),
                     ),

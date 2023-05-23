@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:proyecto_veterinaria/views/crear_cuenta.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -130,7 +131,9 @@ class Login extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 217, 217, 217),
                 ),
-                onPressed: () {},
+                onPressed: () {Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=> const crear_cuenta())
+                          );},
                 child: const Text(
                   "Crear cuenta",
                   style: TextStyle(
