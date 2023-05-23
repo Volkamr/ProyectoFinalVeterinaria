@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:proyecto_veterinaria/views/vista_contactos.dart';
+import 'package:proyecto_veterinaria/views/vista_personal.dart';
 
 class mainMenu extends StatelessWidget {
   const mainMenu({super.key});
@@ -24,7 +26,7 @@ class mainMenu extends StatelessWidget {
                       fontSize: 30,
                       color: Color.fromARGB(255, 20, 108, 148)),
                 ),
-                onTap: () => null, //Debe navegar a la ventana de personal
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder:(context) => personal())) //Debe navegar a la ventana de personal
               ),
               const SizedBox(
                 width: 70,
@@ -50,7 +52,7 @@ class mainMenu extends StatelessWidget {
                       fontSize: 30,
                       color: Color.fromARGB(255, 20, 108, 148)),
                 ),
-                onTap: () => null, //Debe navegar a la ventana de contactos
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder:(context) => contactos())) //Debe navegar a la ventana de contactos
               ),
               const SizedBox(
                 width: 70,
