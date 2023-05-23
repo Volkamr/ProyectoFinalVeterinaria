@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:proyecto_veterinaria/views/main_menu.dart';
+import 'package:proyecto_veterinaria/views/vista_perfil.dart';
 import 'package:proyecto_veterinaria/views/vista_personal.dart';
+import 'package:proyecto_veterinaria/views/vista_servicios.dart';
 
 class contactos extends StatefulWidget {
   const contactos({super.key});
@@ -65,7 +67,7 @@ class _contactosState extends State<contactos> {
                       fontSize: 30,
                       color: Color.fromARGB(255, 20, 108, 148)),
                 ),
-                onTap: () => null, //Debe navegar a la ventana de servicios
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => servicios())), //Debe navegar a la ventana de servicios
               ),
               const SizedBox(
                 width: 70,
@@ -89,7 +91,7 @@ class _contactosState extends State<contactos> {
               ),
               GestureDetector(
                 child: Image.asset("assets/7.png", height: 53),
-                onTap: () => null, //Debe navegar a la ventana de perfil
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => perfil())), //Debe navegar a la ventana de perfil
               ),
               const SizedBox(
                 width: 100,
