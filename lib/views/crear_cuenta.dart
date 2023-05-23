@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:proyecto_veterinaria/views/login.dart';
+import 'package:proyecto_veterinaria/views/main_menu.dart';
 
 class crear_cuenta extends StatelessWidget {
   const crear_cuenta({super.key});
@@ -11,6 +12,7 @@ class crear_cuenta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -21,95 +23,116 @@ class crear_cuenta extends StatelessWidget {
             width: 10,
           ),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Titulo crear cuenta
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
-              const Text(
-                "CREA TU CUENTA",
-                style: TextStyle(
-                    fontFamily: 'GrenzeRegular',
-                    fontSize: 45,
-                    color: Color.fromARGB(255, 20, 108, 148)),
+              GestureDetector(
+                child: Image.asset('assets/home.png', height: 40, width: 100),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const mainMenu()));
+                },
               ),
-              //subtitulo
-              const Text(
-                "y accede a los beneficios que tenemos",
-                style: TextStyle(
-                    fontFamily: 'GrenzeRegular',
-                    fontSize: 25,
-                    color: Color.fromARGB(255, 58, 183, 237)),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              //fila de textfield, nombre y apellido
-              fila_nombre_apellido(),
-              const SizedBox(
-                height: 30,
-              ),
-              //Columna con los textfield correo y contraseña
-              columna_textfield_correo_contrasena(),
-              const SizedBox(
-                height: 30,
-              ),
-              Container(
-                height: 53,
-                width: 252,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 25, 167, 206),
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 25, 167, 206),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    "Crear cuenta",
-                    style: TextStyle(
-                      fontFamily: 'GrenzeRegular',
-                      fontSize: 25,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Row(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
                 children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  //Titulo crear cuenta
+                  const SizedBox(
+                    height: 20,
+                  ),
                   const Text(
-                    "¿Ya tienes una cuenta?",
+                    "CREA TU CUENTA",
                     style: TextStyle(
                         fontFamily: 'GrenzeRegular',
-                        fontSize: 18,
-                        color: Color.fromARGB(122, 30, 30, 30)),
+                        fontSize: 45,
+                        color: Color.fromARGB(255, 20, 108, 148)),
+                  ),
+                  //subtitulo
+                  const Text(
+                    "y accede a los beneficios que tenemos",
+                    style: TextStyle(
+                        fontFamily: 'GrenzeRegular',
+                        fontSize: 25,
+                        color: Color.fromARGB(255, 58, 183, 237)),
                   ),
                   const SizedBox(
-                    width: 5,
+                    height: 30,
                   ),
-                  GestureDetector(
-                    child: const Text(
-                      "Inicie sesión",
-                      style: TextStyle(
-                          fontFamily: 'GrenzeItalic',
-                          fontSize: 18,
-                          color: Color.fromARGB(255, 25, 167, 206)),
+                  //fila de textfield, nombre y apellido
+                  fila_nombre_apellido(),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  //Columna con los textfield correo y contraseña
+                  columna_textfield_correo_contrasena(),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    height: 53,
+                    width: 252,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 25, 167, 206),
+                      borderRadius: BorderRadius.circular(25),
                     ),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Login()));
-                    },
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            const Color.fromARGB(255, 25, 167, 206),
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        "Crear cuenta",
+                        style: TextStyle(
+                          fontFamily: 'GrenzeRegular',
+                          fontSize: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                   ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        "¿Ya tienes una cuenta?",
+                        style: TextStyle(
+                            fontFamily: 'GrenzeRegular',
+                            fontSize: 18,
+                            color: Color.fromARGB(122, 30, 30, 30)),
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        child: const Text(
+                          "Inicie sesión",
+                          style: TextStyle(
+                              fontFamily: 'GrenzeItalic',
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 25, 167, 206)),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Login()));
+                        },
+                      ),
+                    ],
+                  )
                 ],
-              )
+              ),
             ],
           )
         ],

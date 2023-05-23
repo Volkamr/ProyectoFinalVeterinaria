@@ -5,6 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:proyecto_veterinaria/views/crear_cuenta.dart';
 
+import 'main_menu.dart';
+
 class Login extends StatelessWidget {
   const Login({super.key});
 
@@ -12,16 +14,45 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Row(
-        children: [
-        Positioned(
-        top:-20,
-        left:-20,
-        child: Image.asset('assets/8.jpg', height: 650),
-        ),        
-        const SizedBox(width: 80),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,         
+      children: [
+        Image.asset('assets/8.jpg', height: 650),
+        //const SizedBox(width: 80),
+        Column(      
           children: [
+            const SizedBox(
+              height: 30,
+            ), 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  height: 40,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const mainMenu()));
+                    },
+                    child: Image.asset('assets/home.png', height: 40, width: 100),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            
             const Text(
               "INICIAR SESIÓN",
               style: TextStyle(
@@ -67,7 +98,7 @@ class Login extends StatelessWidget {
                 decoration: const InputDecoration(
                   border: InputBorder.none,
                   hintText: 'Contraseña',
-                  hintStyle: TextStyle(                    
+                  hintStyle: TextStyle(
                     fontFamily: 'GrenzeRegular',
                     fontSize: 25,
                     color: Color.fromARGB(122, 30, 30, 30),
@@ -83,21 +114,22 @@ class Login extends StatelessWidget {
               height: 10,
             ),
             GestureDetector(
-                child: const Text(
-                  "Olvidé mi contraseña",
-                  style: TextStyle(
-                      fontFamily: 'GrenzeItalic',
-                      fontSize: 20,
-                      color: Color.fromARGB(122, 30, 30, 30)),
-                ),
-                onTap: () => null, //Debe navegar a la ventana de reestablecer contraseña
+              child: const Text(
+                "Olvidé mi contraseña",
+                style: TextStyle(
+                    fontFamily: 'GrenzeItalic',
+                    fontSize: 20,
+                    color: Color.fromARGB(122, 30, 30, 30)),
               ),
-              const SizedBox(
+              onTap: () =>
+                  null, //Debe navegar a la ventana de reestablecer contraseña
+            ),
+            const SizedBox(
               height: 20,
             ),
             Container(
               height: 53,
-              width: 252,            
+              width: 252,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 25, 167, 206),
                 borderRadius: BorderRadius.circular(25),
@@ -122,7 +154,7 @@ class Login extends StatelessWidget {
             ),
             Container(
               height: 53,
-              width: 252,            
+              width: 252,
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 217, 217, 217),
                 borderRadius: BorderRadius.circular(25),
