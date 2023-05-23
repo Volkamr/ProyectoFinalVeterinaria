@@ -118,7 +118,7 @@ class servicios extends StatelessWidget {
                         Container(
                           width: 357,
                           height: 110,
-                          color: Colors.red,
+                          child: Image.asset('assets/gatito_1.png'),
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -139,10 +139,10 @@ class servicios extends StatelessWidget {
                      child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
+                        SizedBox(
                           width: 357,
                           height: 110,
-                          color: Colors.red,
+                          child: Image.asset("assets/oficina.jpg"),
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -166,7 +166,7 @@ class servicios extends StatelessWidget {
                         Container(
                           width: 357,
                           height: 110,
-                          color: Colors.red,
+                          child: Image.asset("assets/oficina_2.jpg"),
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -204,9 +204,9 @@ class servicios extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          color: Colors.red,
                           width: 357,
                           height: 110,
+                          child: Image.asset("assets/cirugia.jpg"),
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -227,13 +227,14 @@ class servicios extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                          color: Colors.red,
                           width: 357,
                           height: 110,
+                          child: Image.asset("assets/cuidados_intensivos.jpg"),
+
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
-                            "Cirugias",
+                            "Unidad de Cuidados Intensivos",
                             style: TextStyle(
                             color: Color.fromARGB(255, 25, 167, 206),
                             fontFamily: 'GrenzeRegular',
@@ -250,13 +251,14 @@ class servicios extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                          color: Colors.red,
                           width: 357,
                           height: 110,
+                          child: Image.asset("assets/medicina_preventiva.jpg"),
+                          
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
-                            "Cirugias",
+                            "Medicina Preventiva",
                             style: TextStyle(
                             color: Color.fromARGB(255, 25, 167, 206),
                             fontFamily: 'GrenzeRegular',
