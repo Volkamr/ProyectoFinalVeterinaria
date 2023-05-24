@@ -94,31 +94,44 @@ class servicios extends StatelessWidget {
            height: 555,
            child: Column(
             children: [
-              Row(
+              const Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(
-                    color: const Color.fromARGB(246, 241, 241, 255),
+                  SizedBox(
                     width: 42,
                     height: 42,
                   )
               ],
               ),
-              
               Row( 
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    color: Colors.white,
+                  Container(            //Bloque completo
                     width: 357,
                     height: 152,
+                    decoration:  BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(10)
+                      ),
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey[850]!.withOpacity(0.29),
+                        offset: const Offset(-8, 8),
+                        blurRadius: 10
+                      )]
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
+                        Container(             //Bloque de Imagen
                           width: 357,
                           height: 110,
-                          child: Image.asset('assets/gatito_1.png'),
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/gatito_1.png'),
+                              fit: BoxFit.cover
+                            )
+                          )
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -132,17 +145,32 @@ class servicios extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Container(
-                    color: Colors.white,
+                  Container(          //Bloque Completo
                     height: 152,
                     width: 357,
+                    decoration:  BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(10)
+                      ),
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey[850]!.withOpacity(0.29),
+                        offset: const Offset(-8, 8),
+                        blurRadius: 10
+                      )]
+                    ),
                      child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(
+                        Container(             //Bloque de imagen 
                           width: 357,
                           height: 110,
-                          child: Image.asset("assets/oficina.jpg"),
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/oficina.jpg'),
+                              fit: BoxFit.cover
+                            )
+                          )
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -156,17 +184,32 @@ class servicios extends StatelessWidget {
                       ],
                     ),
                 ),
-                Container(
-                  color: Colors.white,
+                Container(              //Bloque completo
                   height: 152,
                   width: 357,
+                  decoration:  BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(10)
+                      ),
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey[850]!.withOpacity(0.29),
+                        offset: const Offset(-8, 8),
+                        blurRadius: 10
+                      )]
+                    ),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
+                        Container(             //Bloque de imagen
                           width: 357,
                           height: 110,
-                          child: Image.asset("assets/oficina_2.jpg"),
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/oficina_2.jpg'),
+                              fit: BoxFit.cover
+                            )
+                          )
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -182,31 +225,44 @@ class servicios extends StatelessWidget {
                 )
                 ],
               ),
-              Row(
+              const Row(        //Segunda fila
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    color: const Color.fromARGB(246, 241, 241, 255),
+                  SizedBox(    //Bloque de separacion
                     width: 47,
                     height: 80,
                   ),
                 ],
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    color: Colors.white,
+                  Container(        //Bloque completo
                     width: 357,
                     height: 152,
+                    decoration:  BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(10)
+                      ),
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey[850]!.withOpacity(0.29),
+                        offset: const Offset(-8, 8),
+                        blurRadius: 10
+                      )]
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
+                        Container(           //Bloque de imagen
                           width: 357,
                           height: 110,
-                          child: Image.asset("assets/cirugia.jpg"),
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/cirugia.jpg'),
+                              fit: BoxFit.cover
+                            )
+                          )
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -220,17 +276,31 @@ class servicios extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Container(
-                    color: Colors.white,
+                  Container(        //Bloque completo
                     width: 357,
                     height: 152,
+                    decoration:  BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(10)
+                      ),
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey[850]!.withOpacity(0.29),
+                        offset: const Offset(-8, 8),
+                        blurRadius: 10
+                      )]
+                    ),
                     child: Column(
                       children: [
-                        Container(
+                        Container(         //Bloque de imagen
                           width: 357,
                           height: 110,
-                          child: Image.asset("assets/cuidados_intensivos.jpg"),
-
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/cuidados_intensivos.jpg'),
+                              fit: BoxFit.cover
+                            )
+                          )
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
@@ -244,17 +314,31 @@ class servicios extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Container(
-                    color: Colors.white,
+                  Container(        //Bloque completo
                     width: 357,
                     height: 152,
+                    decoration:  BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(10)
+                      ),
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey[850]!.withOpacity(0.29),
+                        offset: const Offset(-8, 8),
+                        blurRadius: 10
+                      )]
+                    ),
                     child: Column(
                       children: [
-                        Container(
+                        Container(         //Bloque de imagen
                           width: 357,
                           height: 110,
-                          child: Image.asset("assets/medicina_preventiva.jpg"),
-                          
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/medicina_preventiva.jpg'),
+                              fit: BoxFit.cover
+                            )
+                          )
                         ),
                         const Padding(padding: EdgeInsets.all(3)),
                         const Text(
