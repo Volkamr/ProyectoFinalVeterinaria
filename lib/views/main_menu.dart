@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:proyecto_veterinaria/views/login.dart';
+import 'package:proyecto_veterinaria/views/reservas.dart';
 import 'package:proyecto_veterinaria/views/vista_contactos.dart';
 import 'package:proyecto_veterinaria/views/vista_perfil.dart';
 import 'package:proyecto_veterinaria/views/vista_personal.dart';
