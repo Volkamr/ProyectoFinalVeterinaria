@@ -1,14 +1,23 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:proyecto_veterinaria/services/firebase_services.dart';
 import 'package:proyecto_veterinaria/views/login.dart';
 import 'package:proyecto_veterinaria/views/main_menu.dart';
 
-class crear_cuenta extends StatelessWidget {
-  const crear_cuenta({super.key});
+  TextEditingController nameController = TextEditingController(text:"");
+  TextEditingController passwordController = TextEditingController(text:"");
+  TextEditingController lastNameController = TextEditingController(text:"");
+  TextEditingController userController = TextEditingController(text:"");
+  String txt = "";
+  
 
+class crear_cuenta extends StatelessWidget {
+ crear_cuenta({super.key});
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +97,10 @@ class crear_cuenta extends StatelessWidget {
                         backgroundColor:
                             const Color.fromARGB(255, 25, 167, 206),
                       ),
-                      onPressed: () {},
+                      onPressed: () async {
+                        txt = addPeople(nameController.text,lastNameController.text,
+                             passwordController.text, userController.text).toString();
+                      },
                       child: const Text(
                         "Crear cuenta",
                         style: TextStyle(
@@ -157,6 +169,7 @@ Widget fila_nombre_apellido() {
         height: 48.50,
         width: 200.73,
         child: TextFormField(
+          controller: nameController,
           decoration: const InputDecoration(
             border: InputBorder.none,
             hintText: 'Nombre',
@@ -184,6 +197,7 @@ Widget fila_nombre_apellido() {
         height: 48.50,
         width: 200.73,
         child: TextFormField(
+          controller: lastNameController,
           decoration: const InputDecoration(
             border: InputBorder.none,
             hintText: 'Apellido',
@@ -199,6 +213,12 @@ Widget fila_nombre_apellido() {
               fontSize: 25),
         ),
       ),
+      SizedBox(
+        height: 10,
+      ),
+      Text(txt,
+      style: TextStyle(fontFamily: 'GrenzeRegular', fontSize: 20, color: Colors.black),
+      )
     ],
   );
 }
@@ -215,6 +235,7 @@ Widget columna_textfield_correo_contrasena() {
         height: 48.15,
         width: 430.73,
         child: TextFormField(
+          controller: userController,
           decoration: const InputDecoration(
             border: InputBorder.none,
             hintText: 'Correo o nombre de usuario',
@@ -242,6 +263,7 @@ Widget columna_textfield_correo_contrasena() {
         height: 48.15,
         width: 430.73,
         child: TextFormField(
+          controller: passwordController,
           decoration: const InputDecoration(
             border: InputBorder.none,
             hintText: 'Contraseña',

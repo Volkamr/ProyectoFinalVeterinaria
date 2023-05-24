@@ -164,7 +164,7 @@ class Login extends StatelessWidget {
                   backgroundColor: const Color.fromARGB(255, 217, 217, 217),
                 ),
                 onPressed: () {Navigator.push(context,
-                            MaterialPageRoute(builder: (context)=> const crear_cuenta())
+                            MaterialPageRoute(builder: (context)=> crear_cuenta())
                           );},
                 child: const Text(
                   "Crear cuenta",
