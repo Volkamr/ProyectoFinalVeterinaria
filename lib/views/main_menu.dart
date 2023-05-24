@@ -67,14 +67,19 @@ class mainMenu extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => const contactos()));
-                  }, //Debe navegar a la ventana de contactos
+                  }, 
                 ),
                 const SizedBox(
                   width: 50,
                 ),
                 GestureDetector(
                   child: Image.asset("assets/7.png", height: 53),
-                  onTap: () => null, //Debe navegar a la ventana de perfil
+                  onTap: () {  
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Login()));                 
+                  }, 
                 ),
                 const SizedBox(
                   width: 30,
@@ -116,7 +121,7 @@ class mainMenu extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                      width: 566,
+                      width: 670,
                       height: 530,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -172,6 +177,9 @@ class mainMenu extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: 70,
+                  ),             
                   Expanded(
                     child: Container(
                         height: 530,
