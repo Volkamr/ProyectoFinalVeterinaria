@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_veterinaria/views/main_menu.dart';
+import 'package:proyecto_veterinaria/views/reservas.dart';
 import 'package:proyecto_veterinaria/views/vista_contactos.dart';
 import 'package:proyecto_veterinaria/views/vista_perfil.dart';
 import 'package:proyecto_veterinaria/views/vista_personal.dart';
@@ -120,6 +121,8 @@ class servicios extends StatelessWidget {
                         blurRadius: 10
                       )]
                     ),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const reservas())),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -144,6 +147,7 @@ class servicios extends StatelessWidget {
                         ),
                       ],
                     ),
+                    )
                   ),
                   Container(          //Bloque Completo
                     height: 152,
@@ -159,6 +163,8 @@ class servicios extends StatelessWidget {
                         blurRadius: 10
                       )]
                     ),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const reservas())),
                      child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -183,6 +189,7 @@ class servicios extends StatelessWidget {
                         ),
                       ],
                     ),
+                  )
                 ),
                 Container(              //Bloque completo
                   height: 152,
@@ -198,6 +205,8 @@ class servicios extends StatelessWidget {
                         blurRadius: 10
                       )]
                     ),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const reservas())),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -222,6 +231,7 @@ class servicios extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ) 
                 )
                 ],
               ),
@@ -251,6 +261,8 @@ class servicios extends StatelessWidget {
                         blurRadius: 10
                       )]
                     ),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const reservas())),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -275,6 +287,7 @@ class servicios extends StatelessWidget {
                           )
                       ],
                     ),
+                    )
                   ),
                   Container(        //Bloque completo
                     width: 357,
@@ -290,6 +303,8 @@ class servicios extends StatelessWidget {
                         blurRadius: 10
                       )]
                     ),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const reservas())),
                     child: Column(
                       children: [
                         Container(         //Bloque de imagen
@@ -313,6 +328,7 @@ class servicios extends StatelessWidget {
                           )
                       ],
                     ),
+                    )
                   ),
                   Container(        //Bloque completo
                     width: 357,
@@ -328,6 +344,8 @@ class servicios extends StatelessWidget {
                         blurRadius: 10
                       )]
                     ),
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const reservas())),
                     child: Column(
                       children: [
                         Container(         //Bloque de imagen
@@ -351,6 +369,7 @@ class servicios extends StatelessWidget {
                           )
                       ],
                     ),
+                  )
                   )
                 ],
               )
