@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:proyecto_veterinaria/views/confirmar_cambio_con.dart';
 import 'package:proyecto_veterinaria/views/crear_cuenta.dart';
 import 'package:proyecto_veterinaria/views/vista_contactos.dart';
 
@@ -132,7 +133,12 @@ class cambiar_contrasena extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 25, 167, 206),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const confirmar_cambio_con()));
+                        },
                     child: const Text(
                       "Confirmar cambio",
                       style: TextStyle(
