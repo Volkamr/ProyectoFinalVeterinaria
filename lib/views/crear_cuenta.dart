@@ -13,11 +13,9 @@ import 'package:proyecto_veterinaria/views/main_menu.dart';
   TextEditingController lastNameController = TextEditingController(text:"");
   TextEditingController userController = TextEditingController(text:"");
   String txt = "";
-  
 
 class crear_cuenta extends StatelessWidget {
  crear_cuenta({super.key});
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
