@@ -95,7 +95,7 @@ class servicios extends StatelessWidget {
            height: 555,
            child: Column(
             children: [
-              const Row(
+              Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   SizedBox(
@@ -235,7 +235,7 @@ class servicios extends StatelessWidget {
                 )
                 ],
               ),
-              const Row(        //Segunda fila
+               Row(        //Segunda fila
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(    //Bloque de separacion

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>748533568693-caevgc6bp6kcqi27ur7jripsqno4pkgv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.748533568693-caevgc6bp6kcqi27ur7jripsqno4pkgv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCZC7_Nb3_Gb8uHoCwALR78J3R2TfkqWhU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>748533568693</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.proyectoVeterinaria</string>
+	<key>PROJECT_ID</key>
+	<string>veterinaria-friendly-pets</string>
+	<key>STORAGE_BUCKET</key>
+	<string>veterinaria-friendly-pets.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:748533568693:ios:fad1d464490e6b3e88dafc</string>
+</dict>
+</plist>

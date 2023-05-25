@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:proyecto_veterinaria/views/cambiar_contrasena.dart';
+import 'package:proyecto_veterinaria/views/confirmar_cambio_con.dart';
 import 'package:proyecto_veterinaria/views/login.dart';
 import 'package:proyecto_veterinaria/views/reservas.dart';
 import 'package:proyecto_veterinaria/views/vista_contactos.dart';
@@ -67,14 +69,19 @@ class mainMenu extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) => const contactos()));
-                  }, //Debe navegar a la ventana de contactos
+                  }, 
                 ),
                 const SizedBox(
                   width: 50,
                 ),
                 GestureDetector(
                   child: Image.asset("assets/7.png", height: 53),
-                  onTap: () => null, //Debe navegar a la ventana de perfil
+                  onTap: () {  
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Login()));                 
+                  }, 
                 ),
                 const SizedBox(
                   width: 30,
@@ -114,9 +121,12 @@ class mainMenu extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    width: 60,
+                  ),
                   Expanded(
                     child: Container(
-                      width: 566,
+                      width: 670,
                       height: 530,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -172,6 +182,9 @@ class mainMenu extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    width: 70,
+                  ),             
                   Expanded(
                     child: Container(
                         height: 530,

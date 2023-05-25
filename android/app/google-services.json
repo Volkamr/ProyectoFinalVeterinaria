@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "748533568693",
+    "project_id": "veterinaria-friendly-pets",
+    "storage_bucket": "veterinaria-friendly-pets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748533568693:android:bd19a2d272e2bc2588dafc",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_veterinaria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748533568693-4nq0qru1bra7ovceluv60cafd8po6k93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHRHHipMyI0x1XMwGhpAEUhXWwBhOnQuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748533568693-4nq0qru1bra7ovceluv60cafd8po6k93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
