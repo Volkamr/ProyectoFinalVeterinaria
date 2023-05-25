@@ -51,7 +51,12 @@ class mainMenu extends StatelessWidget {
                         fontSize: 30,
                         color: Color.fromARGB(255, 20, 108, 148)),
                   ),
-                  onTap: () => null, //Debe navegar a la ventana de servicios
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const servicios()));
+                  }, //Debe navegar a la ventana de servicios
                 ),
                 const SizedBox(
                   width: 70,
@@ -162,10 +167,13 @@ class mainMenu extends StatelessWidget {
                             height: 100,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
-                            /*Si está logueado debe redirigir a la pantalla de
-                          reserver, si no, debe redirigir a login
-                          */
+                            onPressed: () {
+                              Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const reservas()));
+                            },
+                            
                             child: const Text(
                               "¡Agenda tu cita!",
                               style: TextStyle(

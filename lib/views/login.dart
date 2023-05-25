@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:proyecto_veterinaria/views/cambiar_contrasena.dart';
 import 'package:proyecto_veterinaria/views/crear_cuenta.dart';
+import 'package:proyecto_veterinaria/views/vista_perfil.dart';
 import 'main_menu.dart';
 import 'package:proyecto_veterinaria/services/firebase_services.dart';
 import 'package:proyecto_veterinaria/views/login.dart';
@@ -123,7 +124,7 @@ class Login extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const mainMenu()));
+                              builder: (context) => const perfil()));
                       _count = 0;
 
                       showDialog(
