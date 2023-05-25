@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:proyecto_veterinaria/views/main_menu.dart';
-import 'package:proyecto_veterinaria/views/vista_citas.dart';
 import 'package:proyecto_veterinaria/views/vista_historial.dart';
 import 'package:proyecto_veterinaria/views/vista_mascotas.dart';
+import 'package:proyecto_veterinaria/views/vista_perfil.dart';
 
-// ignore: camel_case_types
-class perfil extends StatelessWidget {
-  const perfil({super.key});
+class Citas extends StatelessWidget{
+  const Citas({super.key});
   
   @override
   Widget build(BuildContext context) {
@@ -171,18 +170,17 @@ class perfil extends StatelessWidget {
               ],
             ),
           ),
-           const Padding(padding: EdgeInsets.all(0)),
           Container(
             color: Colors.white,
             width: 995,
             height: 657,
-            child:  Column(
+            child: Column(
               children: [
                 const SizedBox(
-                  width: 504,
+                  width: 291,
                   height: 89,
                   child: Text(
-                    'Informacion Personal',
+                    'Citas Activas',
                     style: TextStyle(
                       color: Colors.black,
                       fontFamily: 'GrenzeRegular',
@@ -191,202 +189,150 @@ class perfil extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(      //Separacion
-                  width: 30,
-                  height: 95,
+                const SizedBox(           //Separacion
+                      width: 72,
+                      height: 72,
                 ),
-                Row(
+                Container(
+                  width: 790,
+                  height: 145,
+                  decoration: const BoxDecoration(
+                  color:  Color.fromARGB(255, 211, 242, 255),
+                  borderRadius: BorderRadius.all(Radius.circular(22))
+                  ),
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 36,
+                            height: 2,
+                          ),
+                          SizedBox(
+                            width: 134,
+                            height: 44,
+                            child: Text(
+                              'Reserva#45',
+                              style: TextStyle(
+                                fontFamily: 'GrenzeRegular',
+                                fontSize: 30,
+                              ),
+                            )
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 36,
+                            height: 2,
+                          ),
+                          SizedBox(
+                            width: 136,
+                            height: 30,
+                            child: Text(
+                              'Fecha:mayo 26/2023',
+                              style: TextStyle(
+                                fontFamily: 'GrenzeRegular',
+                                fontSize: 20,
+                              ),
+                            )
+                          ),
+                           SizedBox(
+                            width: 77,
+                            height: 2,
+                          ),
+                          SizedBox(
+                            width: 304,
+                            height: 30,
+                            child: Text(
+                              'Veterinario asignado: Dr. Hector Maturara',
+                              style: TextStyle(
+                                fontFamily: 'GrenzeRegular',
+                                fontSize: 20,
+                              ),
+                            )
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 36,
+                            height: 2,
+                          ),
+                          SizedBox(
+                            width: 136,
+                            height: 30,
+                            child: Text(
+                              'Mascota: Candy',
+                              style: TextStyle(
+                                fontFamily: 'GrenzeRegular',
+                                fontSize: 20,
+                              ),
+                            )
+                          ),
+                          SizedBox(
+                            width: 77,
+                            height: 2,
+                          ),
+                          SizedBox(
+                            width: 183,
+                            height: 30,
+                            child: Text(
+                              'Servicio: Revision General',
+                              style: TextStyle(
+                                fontFamily: 'GrenzeRegular',
+                                fontSize: 20,
+                              ),
+                            )
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 59,
+                  height: 59,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 137,
+                  height: 96,
+                  decoration: const BoxDecoration(
+                  color:  Color.fromARGB(255, 211, 242, 255),
+                  borderRadius: BorderRadius.all(Radius.circular(22))
+                  ),
+                  child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(      //Texto - Nombre
-                      'Nombre:',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'GrenzeRegular',
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    const SizedBox(    //Separacion
-                      width: 15,
-                      height: 15,
-                    ),
-                    Container(   //TextField - Nombre
-                      width: 292,
-                      height: 35,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(21),
-                        color: const Color.fromARGB(255, 143, 202, 226),
-                      ),
-                      child: TextField(
-                        textAlign: TextAlign.center,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(21),
+                    Text(
+                      'Agendar',
+                       style: TextStyle(
+                          fontFamily: 'GrenzeRegular',
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold
                           ),
-                        ),
-                      )
-                    ),
-                    const SizedBox(    //Separacion
-                      width: 62,
-                      height: 62,
-                    ),
-                    const Text(   //Texto - Telefono
-                      'Telefono:',
+                      ),
+                    Text(
+                      '+',
                       style: TextStyle(
-                        color: Colors.black,
                         fontFamily: 'GrenzeRegular',
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    const SizedBox(    //Separacion
-                      width: 18,
-                      height: 18,
-                    ),
-                    Container(    //TextField - Telefono
-                      width: 180,
-                      height: 35,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(21),
-                        color: const Color.fromARGB(255, 143, 202, 226),
-                      ),
-                      child: TextField(
-                        textAlign: TextAlign.center,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(21),
-                          ),
-                        ),
+                        fontSize: 20,
+                       ),
                       )
-                    ),
-                  ],
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                  SizedBox(    //Separacion Vertical
-                    width: 60,
-                    height: 60,
+                    ],
                   )
-                ],
-              ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(      //Texto - Apellidos
-                      'Apellidos:',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'GrenzeRegular',
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    const SizedBox(      //Separacion
-                      width: 15,
-                      height: 15,
-                    ),
-                    Container(    //TextField - Apellidos
-                      width: 292, 
-                      height: 35,
-                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(21),
-                        color: const Color.fromARGB(255, 143, 202, 226),
-                      ),
-                      child: TextField(
-                        textAlign: TextAlign.center,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(21),
-                          ),
-                        ),
-                      )
-                    ),
-                    const SizedBox(   //Separacion
-                      width: 59,
-                      height: 59,
-                    ),
-                    const Text(  //Texto - Sexo
-                      'Sexo:',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'GrenzeRegular',
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    const SizedBox(    //Separacion
-                      width: 18,
-                      height: 18,
-                    ),
-                    Container(        //TextField - Sexo
-                      width: 180,
-                      height: 35,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(21),
-                        color: const Color.fromARGB(255, 143, 202, 226),
-                      ),
-                      child: TextField(
-                        textAlign: TextAlign.center,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(21),
-                          ),
-                        ),
-                      )
-                    )
-                  ],
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(    //Separacion vertical
-                      width: 60,
-                      height: 60,
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(    //Texto - Correo Electronico
-                      'Correo Electronico:',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'GrenzeRegular',
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    const SizedBox(    //Separacion
-                      width: 18,
-                      height: 18,
-                    ),
-                    Container(    //TextField - Correo
-                      width: 292,
-                      height: 35,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(21),
-                        color: const Color.fromARGB(255, 143, 202, 226),
-                      ),
-                      child: TextField(
-                        textAlign: TextAlign.center,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(21),
-                          ),
-                        ),
-                      )
-                    ),
-                  ],
                 )
               ],
-            )
+            ),
           )
         ],
       ),
     );
   }
+
 
 }

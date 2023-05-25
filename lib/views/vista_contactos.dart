@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:proyecto_veterinaria/views/main_menu.dart';
 import 'package:proyecto_veterinaria/views/vista_perfil.dart';
 import 'package:proyecto_veterinaria/views/vista_personal.dart';
 import 'package:proyecto_veterinaria/views/vista_servicios.dart';
 
+// ignore: camel_case_types
 class contactos extends StatefulWidget {
   const contactos({super.key});
 
@@ -13,6 +12,7 @@ class contactos extends StatefulWidget {
   State<contactos> createState() => _contactosState();
 }
 
+// ignore: camel_case_types
 class _contactosState extends State<contactos> {
   @override
   Widget build(BuildContext context) {
@@ -104,106 +104,106 @@ class _contactosState extends State<contactos> {
           Row(
             children: [
               Container(
-                color: Color.fromARGB(255, 175, 211, 226),
+                color: const Color.fromARGB(255, 175, 211, 226),
                 width: 647,
                 height: 555,
                 //margin: EdgeInsets.only(right: 720),
                 child: Column(
                   children: [
-                    Padding(padding: EdgeInsets.all(20)),
-                    Text(
+                    const Padding(padding: EdgeInsets.all(20)),
+                    const Text(
                       "CONTÁCTANOS",
                       style: TextStyle(
                           fontFamily: 'GrenzeRegular',
                           fontSize: 40,
                           color: Color.fromARGB(255, 20, 108, 148)),
                     ),
-                    Padding(padding: EdgeInsets.all(15)),
+                    const Padding(padding: EdgeInsets.all(15)),
                     Container(
                       width: 411.73,
                       height: 48.15,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(21),
-                        color: Color.fromARGB(255, 246, 241, 241),
+                        color: const Color.fromARGB(255, 246, 241, 241),
                       ),
                       child: TextField(
                         decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(7),
+                            contentPadding: const EdgeInsets.all(7),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(21)),
                             hintText: "Nombre y Apellido",
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                               fontFamily: 'GrenzeRegular',
                               fontSize: 25,
                             )),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    Padding(padding: EdgeInsets.all(10)),
+                    const Padding(padding: EdgeInsets.all(10)),
                     Container(
                       width: 411.73,
                       height: 48.15,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(21),
-                        color: Color.fromARGB(255, 246, 241, 241),
+                        color: const Color.fromARGB(255, 246, 241, 241),
                       ),
                       child: TextField(
                         decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(7),
+                            contentPadding: const EdgeInsets.all(7),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(21)),
                             hintText: "Correo Electronico",
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                               fontFamily: 'GrenzeRegular',
                               fontSize: 25,
                             )),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    Padding(padding: EdgeInsets.all(10)),
+                    const Padding(padding: EdgeInsets.all(10)),
                     Container(
                       width: 411.73,
                       height: 48.15,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(21),
-                        color: Color.fromARGB(255, 246, 241, 241),
+                        color: const Color.fromARGB(255, 246, 241, 241),
                       ),
                       child: TextField(
                         decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(7),
+                            contentPadding: const EdgeInsets.all(7),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(21)),
                             hintText: "Asunto",
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                               fontFamily: 'GrenzeRegular',
                               fontSize: 25,
                             )),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    Padding(padding: EdgeInsets.all(10)),
+                    const Padding(padding: EdgeInsets.all(10)),
                     Container(
                       width: 412,
                       height: 115,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(21),
-                        color: Color.fromARGB(255, 246, 241, 241),
+                        color: const Color.fromARGB(255, 246, 241, 241),
                       ),
                       child: TextField(
                         decoration: InputDecoration(
                             contentPadding:
-                                EdgeInsets.only(top: 50, bottom: 50),
+                                const EdgeInsets.only(top: 50, bottom: 50),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(21)),
                             hintText: "Mensaje",
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                               fontFamily: 'GrenzeRegular',
                               fontSize: 25,
                             )),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    Padding(padding: EdgeInsets.all(20)),
+                    const Padding(padding: EdgeInsets.all(20)),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text(
@@ -219,12 +219,12 @@ class _contactosState extends State<contactos> {
                 ),
               ),
               Container(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 width: 715,
                 height: 555,
                 child: Column(
                   children: [
-                    Padding(padding: EdgeInsets.all(20)),
+                    const Padding(padding: EdgeInsets.all(20)),
                     Container(
                       width: 477,
                       height: 164,
@@ -232,7 +232,7 @@ class _contactosState extends State<contactos> {
                         borderRadius: BorderRadius.circular(21),
                         color: Colors.black,
                       ),
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset("assets/mapa.png",
                           width: 451, height: 140),
                     ),
@@ -240,13 +240,13 @@ class _contactosState extends State<contactos> {
                       children: [
                         Row(
                           children: [
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(
                                     top: 65, left: 90, bottom: 30, right: 90)),
                             Image.asset("assets/face.png",
                                 width: 56, height: 57),
-                            Padding(padding: EdgeInsets.all(10)),
-                            Text(
+                            const Padding(padding: EdgeInsets.all(10)),
+                            const Text(
                               "Veterinaria Facebook",
                               style:
                                   TextStyle(fontFamily: 'Inter', fontSize: 24),
@@ -255,13 +255,13 @@ class _contactosState extends State<contactos> {
                         ),
                         Row(
                           children: [
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(
                                     top: 50, left: 90, bottom: 30, right: 90)),
                             Image.asset("assets/insta.png",
                                 width: 56, height: 57),
-                            Padding(padding: EdgeInsets.all(10)),
-                            Text(
+                            const Padding(padding: EdgeInsets.all(10)),
+                            const Text(
                               "@veterinaria_ig",
                               style:
                                   TextStyle(fontFamily: 'Inter', fontSize: 24),
@@ -270,12 +270,12 @@ class _contactosState extends State<contactos> {
                         ),
                         Row(
                           children: [
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(
                                     top: 50, left: 90, bottom: 30, right: 90)),
                             Image.asset("assets/ws.png", width: 56, height: 57),
-                            Padding(padding: EdgeInsets.all(10)),
-                            Text(
+                            const Padding(padding: EdgeInsets.all(10)),
+                            const Text(
                               "+57 3007347529",
                               style:
                                   TextStyle(fontFamily: 'Inter', fontSize: 24),
@@ -284,13 +284,13 @@ class _contactosState extends State<contactos> {
                         ),
                         Row(
                           children: [
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(
                                     top: 50, left: 90, bottom: 30, right: 90)),
                             Image.asset("assets/mail.png",
                                 width: 56, height: 57),
-                            Padding(padding: EdgeInsets.all(10)),
-                            Text(
+                            const Padding(padding: EdgeInsets.all(10)),
+                            const Text(
                               "veterinaria@gmail.com",
                               style:
                                   TextStyle(fontFamily: 'Inter', fontSize: 24),
