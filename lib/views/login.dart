@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:proyecto_veterinaria/views/cambiar_contrasena.dart';
 import 'package:proyecto_veterinaria/views/crear_cuenta.dart';
 import 'main_menu.dart';
 import 'package:proyecto_veterinaria/services/firebase_services.dart';
@@ -77,14 +78,18 @@ class Login extends StatelessWidget {
             ),
             GestureDetector(
               child: const Text(
-                "Olvidé mi contraseña",
+                "Cambiar contraseña",
                 style: TextStyle(
                     fontFamily: 'GrenzeItalic',
                     fontSize: 20,
                     color: Color.fromARGB(122, 30, 30, 30)),
               ),
-              onTap: () =>
-                  null, //Debe navegar a la ventana de reestablecer contraseña
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const cambiar_contrasena()));
+              }, //Debe navegar a la ventana de reestablecer contraseña
             ),
             const SizedBox(
               height: 20,
@@ -129,8 +134,8 @@ class Login extends StatelessWidget {
                             );
                           });
 
-                          correoNameController.clear();
-                          passwordController.clear();
+                      correoNameController.clear();
+                      passwordController.clear();
                     } else {
                       showDialog(
                           context: context,
